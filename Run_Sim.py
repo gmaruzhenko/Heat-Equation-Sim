@@ -86,6 +86,10 @@ def plot_one_timestep(t):
 
 # Show and label graph
 def show_plots():
+    # Run plotting functions
+    plt.plot(x_axis, w(x_axis), 'r')
+    [plot_one_timestep(t) for t in t_array]
+
     plt.title('Heat Equation Solutions')
     plt.xlabel('x')
     plt.ylabel('u(x,t)')
@@ -97,9 +101,11 @@ def show_plots():
          't = ' + str("%.1f" % t_array[2])])
     plt.show()
 
-# Run plotting functions
-plt.plot(x_axis, w(x_axis), 'r')
-[plot_one_timestep(t) for t in t_array]
 
-show_plots()
+
+
+
+
+# uncomment for 3.b graph
+# show_plots()
 
