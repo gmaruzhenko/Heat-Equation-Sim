@@ -5,7 +5,7 @@ import numpy as np
 from numpy import sqrt, sin, cos, pi, e
 import matplotlib.pyplot as plt
 from scipy.integrate import quad
-import math as math
+
 
 # Number of terms for fourier expansion
 N = 20
