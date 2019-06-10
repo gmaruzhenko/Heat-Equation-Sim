@@ -22,8 +22,8 @@ START = 0
 END = L
 # Times to plot between
 T_INITIAL = 0.1
-T_FINAL = 2
-T_STEP = 0.1
+T_FINAL = 10
+T_STEP = 0.5
 
 # prep arrays
 x_axis = np.linspace(START, END)
@@ -32,7 +32,7 @@ t_array = np.arange(T_INITIAL, T_FINAL, T_STEP)
 
 # Steady state solution
 def w(x):
-    result = K * x**2 / (6 * L) + ((U2-U1)/L - K*L / 6) * x +U1
+    result = -1*K * x**3 / (6 * L) + ((U2-U1)/L + K*L / 6) * x +U1
     return result
 
 
@@ -107,5 +107,5 @@ def show_plots():
 
 
 # uncomment for 3.b graph
-# show_plots()
+show_plots()
 
